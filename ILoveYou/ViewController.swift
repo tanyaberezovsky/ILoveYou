@@ -8,12 +8,13 @@
 
 import UIKit
 import AVFoundation
-
+import GoogleMobileAds
 /// **must** define instance variable outside, because .play() will deallocate AVAudioPlayer
 /// immediately and you won't hear a thing
 var player: AVAudioPlayer?
 
 class ViewController: UIViewController {
+    @IBOutlet weak var bannerView: GADBannerView!
 
     @IBOutlet weak var buttonSlow: UIButton!
     @IBOutlet weak var buttonRegular: UIButton!
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
+        initAd()
     }
 
     func initialize(){
@@ -33,6 +35,14 @@ class ViewController: UIViewController {
         let color2 = UIColor(red: 67/255, green: 148/255, blue: 227/255, alpha: 1.0)
         let color1 = UIColor(red: 98/255, green: 216/255, blue: 202/255, alpha: 1.0)
         self.view.applyGradient(colours: [color1 , color2])
+    }
+    
+    func initAd(){
+        bannerView.adUnitID = Keys.adMob.unitID
+        bannerView.rootViewController = self
+        //request the ad
+ //       bannerView.load(GADRequest())
+ 
     }
     
     @IBAction func buttonSlow(_ sender: UIButton) {
