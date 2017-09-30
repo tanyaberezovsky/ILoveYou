@@ -86,10 +86,6 @@ class ViewController: UIViewController {
                              repeats: false)
     }
     
-        @objc func timerEndedUp() {
-            //output?.timerHasFinishedAndCodeMayBeResended()
-        }
-    
     func scheduleHeartsAppearance()  {
         print("scheduleHeartsAppearance")
         if (self.heartArrayIndex == self.heartRandomArray.count) {
@@ -153,8 +149,7 @@ class ViewController: UIViewController {
         bannerView.adUnitID = Keys.adMob.unitID
         bannerView.rootViewController = self
         //request the ad
- //       bannerView.load(GADRequest())
- 
+        bannerView.load(GADRequest())
     }
     
     @IBAction func buttonSlow(_ sender: UIButton) {
