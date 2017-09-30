@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonSlow: UIButton!
     @IBOutlet weak var buttonRegular: UIButton!
     var player: MyAudioPlayer?
-    let heartRandomArray = (1...100).map{_ in arc4random_uniform(16)}
+    let heartRandomArray = (1...100).map{_ in arc4random_uniform(13)}
     let heartIntervalArray = (1...100).map{_ in arc4random_uniform(8)}
     var heartArrayIndex: Int = 0
     var timer:Timer?
@@ -71,18 +71,19 @@ class ViewController: UIViewController {
 
         heartArrayIndex = 0
         
+        scheduleHeartsAppearance()
         startTimerForHearts()
     }
     
     func startTimerForHearts() {
-        print(heartIntervalArray[heartArrayIndex] + 1)
+        print("\(heartIntervalArray[heartArrayIndex])")
         timer?.invalidate()
         let timerIntervalForResendingCode = TimeInterval(heartIntervalArray[heartArrayIndex] + 1)
         timer = Timer.scheduledTimer(timeInterval: timerIntervalForResendingCode,
                              target: self,
                              selector: #selector(scheduleHeartsAppearance),
                              userInfo: nil,
-                             repeats: true)
+                             repeats: false)
     }
     
         @objc func timerEndedUp() {
@@ -101,11 +102,14 @@ class ViewController: UIViewController {
         stopTimer = Timer.scheduledTimer(timeInterval: stopTimerInterval, target: self, selector: #selector(stopLoopTimerLove), userInfo: nil, repeats: false)
         
         self.heartArrayIndex += 1
-       startTimerForHearts()
+       
     }
     
     func stopLoopTimerLove(){
         loopTimer?.invalidate()
+        stopTimer?.invalidate()
+        timer?.invalidate()
+        startTimerForHearts()
     }
     
     func didLongPress(_ longPressGesture: UILongPressGestureRecognizer) {
