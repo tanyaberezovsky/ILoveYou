@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2312DBC71F472C4A006BB2D2 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312DBC61F472C4A006BB2D2 /* AudioPlayer.swift */; };
 		232E8DAA1F016DAF00E642FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232E8DA91F016DAF00E642FE /* AppDelegate.swift */; };
 		232E8DAC1F016DAF00E642FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232E8DAB1F016DAF00E642FE /* ViewController.swift */; };
 		232E8DAF1F016DAF00E642FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232E8DAD1F016DAF00E642FE /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		232E8DB41F016DAF00E642FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232E8DB21F016DAF00E642FE /* LaunchScreen.storyboard */; };
 		232E8DBF1F016DAF00E642FE /* ILoveYouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232E8DBE1F016DAF00E642FE /* ILoveYouTests.swift */; };
 		232E8DCA1F016DAF00E642FE /* ILoveYouUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232E8DC91F016DAF00E642FE /* ILoveYouUITests.swift */; };
+		233E61811F63E60F005ABCF3 /* FloatingHearts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233E617E1F63E58E005ABCF3 /* FloatingHearts.framework */; };
+		233E61821F63E60F005ABCF3 /* FloatingHearts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233E617E1F63E58E005ABCF3 /* FloatingHearts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2340247D1F0673DB00CE742C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340247C1F0673DB00CE742C /* UIView.swift */; };
 		23F8E3071F07EA9A00D05E5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F8E3061F07EA9A00D05E5A /* GoogleService-Info.plist */; };
 		23F8E3091F08319A00D05E5A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F8E3081F08319A00D05E5A /* Keys.swift */; };
@@ -38,9 +41,46 @@
 			remoteGlobalIDString = 232E8DA51F016DAF00E642FE;
 			remoteInfo = ILoveYou;
 		};
+		233E617D1F63E58E005ABCF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 233E61581F63E47B005ABCF3;
+			remoteInfo = FloatingHearts;
+		};
+		233E617F1F63E58E005ABCF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 233E61611F63E47B005ABCF3;
+			remoteInfo = FloatingHeartsTests;
+		};
+		233E61831F63E60F005ABCF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 233E61571F63E47B005ABCF3;
+			remoteInfo = FloatingHearts;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		233E61851F63E60F005ABCF3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				233E61821F63E60F005ABCF3 /* FloatingHearts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2312DBC61F472C4A006BB2D2 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		2312DBCA1F485E1B006BB2D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		232E8DA61F016DAF00E642FE /* ILoveYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ILoveYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		232E8DA91F016DAF00E642FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		232E8DAB1F016DAF00E642FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +94,8 @@
 		232E8DC51F016DAF00E642FE /* ILoveYouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ILoveYouUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		232E8DC91F016DAF00E642FE /* ILoveYouUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoveYouUITests.swift; sourceTree = "<group>"; };
 		232E8DCB1F016DAF00E642FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		233E61431F63E129005ABCF3 /* FloatingHearts-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "FloatingHearts-master"; path = "../FloatingHearts-master"; sourceTree = "<group>"; };
+		233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FloatingHearts.xcodeproj; path = "../Framework & Library/Cocoa Touch Framework/FloatingHearts/FloatingHearts.xcodeproj"; sourceTree = "<group>"; };
 		2340247C1F0673DB00CE742C /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		23F8E3061F07EA9A00D05E5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23F8E3081F08319A00D05E5A /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -74,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233E61811F63E60F005ABCF3 /* FloatingHearts.framework in Frameworks */,
 				23F8E30B1F096F1900D05E5A /* AdSupport.framework in Frameworks */,
 				8B857E1C921A6B82A8707AF0 /* Pods_ILoveYou.framework in Frameworks */,
 			);
@@ -101,6 +144,7 @@
 		232E8D9D1F016DAF00E642FE = {
 			isa = PBXGroup;
 			children = (
+				233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */,
 				232E8DA81F016DAF00E642FE /* ILoveYou */,
 				232E8DBD1F016DAF00E642FE /* ILoveYouTests */,
 				232E8DC81F016DAF00E642FE /* ILoveYouUITests */,
@@ -125,6 +169,7 @@
 			children = (
 				2340247B1F0673AD00CE742C /* extentions */,
 				232E8DA91F016DAF00E642FE /* AppDelegate.swift */,
+				2312DBC61F472C4A006BB2D2 /* AudioPlayer.swift */,
 				23F8E3081F08319A00D05E5A /* Keys.swift */,
 				232E8DAB1F016DAF00E642FE /* ViewController.swift */,
 				232E8DAD1F016DAF00E642FE /* Main.storyboard */,
@@ -154,6 +199,15 @@
 			path = ILoveYouUITests;
 			sourceTree = "<group>";
 		};
+		233E61791F63E58E005ABCF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				233E617E1F63E58E005ABCF3 /* FloatingHearts.framework */,
+				233E61801F63E58E005ABCF3 /* FloatingHeartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2340247B1F0673AD00CE742C /* extentions */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +232,8 @@
 		5B45854801D52DA69102D744 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				233E61431F63E129005ABCF3 /* FloatingHearts-master */,
+				2312DBCA1F485E1B006BB2D2 /* AVFoundation.framework */,
 				23F8E30A1F096F1900D05E5A /* AdSupport.framework */,
 				526CF8F5B30603147889CF04 /* Pods_ILoveYou.framework */,
 				A6482F01951E18E353E678AB /* Pods_ILoveYouTests.framework */,
@@ -199,10 +255,12 @@
 				232E8DA41F016DAF00E642FE /* Resources */,
 				775F3F94297B9C4A9D63FFB3 /* [CP] Embed Pods Frameworks */,
 				917CF42C17F69DAA8D648D21 /* [CP] Copy Pods Resources */,
+				233E61851F63E60F005ABCF3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				233E61841F63E60F005ABCF3 /* PBXTargetDependency */,
 			);
 			name = ILoveYou;
 			productName = ILoveYou;
@@ -291,6 +349,12 @@
 			mainGroup = 232E8D9D1F016DAF00E642FE;
 			productRefGroup = 232E8DA71F016DAF00E642FE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 233E61791F63E58E005ABCF3 /* Products */;
+					ProjectRef = 233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				232E8DA51F016DAF00E642FE /* ILoveYou */,
@@ -299,6 +363,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		233E617E1F63E58E005ABCF3 /* FloatingHearts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FloatingHearts.framework;
+			remoteRef = 233E617D1F63E58E005ABCF3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		233E61801F63E58E005ABCF3 /* FloatingHeartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FloatingHeartsTests.xctest;
+			remoteRef = 233E617F1F63E58E005ABCF3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		232E8DA41F016DAF00E642FE /* Resources */ = {
@@ -473,6 +554,7 @@
 			files = (
 				232E8DAC1F016DAF00E642FE /* ViewController.swift in Sources */,
 				23F8E3091F08319A00D05E5A /* Keys.swift in Sources */,
+				2312DBC71F472C4A006BB2D2 /* AudioPlayer.swift in Sources */,
 				2340247D1F0673DB00CE742C /* UIView.swift in Sources */,
 				232E8DAA1F016DAF00E642FE /* AppDelegate.swift in Sources */,
 			);
@@ -506,6 +588,11 @@
 			isa = PBXTargetDependency;
 			target = 232E8DA51F016DAF00E642FE /* ILoveYou */;
 			targetProxy = 232E8DC61F016DAF00E642FE /* PBXContainerItemProxy */;
+		};
+		233E61841F63E60F005ABCF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FloatingHearts;
+			targetProxy = 233E61831F63E60F005ABCF3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -628,6 +715,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 293D9F1FB65FB3C708BE6BD7 /* Pods-ILoveYou.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HS2EBXX3A9;
 				INFOPLIST_FILE = ILoveYou/Info.plist;
@@ -642,6 +730,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC89CCC80C381320E19DB942 /* Pods-ILoveYou.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HS2EBXX3A9;
 				INFOPLIST_FILE = ILoveYou/Info.plist;
