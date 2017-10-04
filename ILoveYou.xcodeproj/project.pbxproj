@@ -15,8 +15,8 @@
 		232E8DB41F016DAF00E642FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232E8DB21F016DAF00E642FE /* LaunchScreen.storyboard */; };
 		232E8DBF1F016DAF00E642FE /* ILoveYouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232E8DBE1F016DAF00E642FE /* ILoveYouTests.swift */; };
 		232E8DCA1F016DAF00E642FE /* ILoveYouUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232E8DC91F016DAF00E642FE /* ILoveYouUITests.swift */; };
-		233E61811F63E60F005ABCF3 /* FloatingHearts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233E617E1F63E58E005ABCF3 /* FloatingHearts.framework */; };
-		233E61821F63E60F005ABCF3 /* FloatingHearts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233E617E1F63E58E005ABCF3 /* FloatingHearts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		233AF93A1F84FB0A0047141B /* FloatingHearts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233AF9371F84FADB0047141B /* FloatingHearts.framework */; };
+		233AF93B1F84FB0A0047141B /* FloatingHearts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233AF9371F84FADB0047141B /* FloatingHearts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2340247D1F0673DB00CE742C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340247C1F0673DB00CE742C /* UIView.swift */; };
 		23F8E3071F07EA9A00D05E5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F8E3061F07EA9A00D05E5A /* GoogleService-Info.plist */; };
 		23F8E3091F08319A00D05E5A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F8E3081F08319A00D05E5A /* Keys.swift */; };
@@ -41,25 +41,25 @@
 			remoteGlobalIDString = 232E8DA51F016DAF00E642FE;
 			remoteInfo = ILoveYou;
 		};
-		233E617D1F63E58E005ABCF3 /* PBXContainerItemProxy */ = {
+		233AF9361F84FADB0047141B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */;
+			containerPortal = 233AF9311F84FADB0047141B /* FloatingHearts.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 233E61581F63E47B005ABCF3;
+			remoteGlobalIDString = A1A867711CC82E5C001BBB2D;
 			remoteInfo = FloatingHearts;
 		};
-		233E617F1F63E58E005ABCF3 /* PBXContainerItemProxy */ = {
+		233AF9381F84FADB0047141B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */;
+			containerPortal = 233AF9311F84FADB0047141B /* FloatingHearts.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 233E61611F63E47B005ABCF3;
-			remoteInfo = FloatingHeartsTests;
+			remoteGlobalIDString = A1A867801CC82E83001BBB2D;
+			remoteInfo = FloatingHeartsExample;
 		};
-		233E61831F63E60F005ABCF3 /* PBXContainerItemProxy */ = {
+		233AF93C1F84FB0A0047141B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */;
+			containerPortal = 233AF9311F84FADB0047141B /* FloatingHearts.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 233E61571F63E47B005ABCF3;
+			remoteGlobalIDString = A1A867701CC82E5C001BBB2D;
 			remoteInfo = FloatingHearts;
 		};
 /* End PBXContainerItemProxy section */
@@ -71,7 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				233E61821F63E60F005ABCF3 /* FloatingHearts.framework in Embed Frameworks */,
+				233AF93B1F84FB0A0047141B /* FloatingHearts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,8 +94,8 @@
 		232E8DC51F016DAF00E642FE /* ILoveYouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ILoveYouUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		232E8DC91F016DAF00E642FE /* ILoveYouUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoveYouUITests.swift; sourceTree = "<group>"; };
 		232E8DCB1F016DAF00E642FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		233AF9311F84FADB0047141B /* FloatingHearts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FloatingHearts.xcodeproj; path = "../../FloatingHearts-master/FloatingHearts.xcodeproj"; sourceTree = "<group>"; };
 		233E61431F63E129005ABCF3 /* FloatingHearts-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "FloatingHearts-master"; path = "../FloatingHearts-master"; sourceTree = "<group>"; };
-		233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FloatingHearts.xcodeproj; path = "../Framework & Library/Cocoa Touch Framework/FloatingHearts/FloatingHearts.xcodeproj"; sourceTree = "<group>"; };
 		2340247C1F0673DB00CE742C /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		23F8E3061F07EA9A00D05E5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23F8E3081F08319A00D05E5A /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -116,8 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				233E61811F63E60F005ABCF3 /* FloatingHearts.framework in Frameworks */,
 				23F8E30B1F096F1900D05E5A /* AdSupport.framework in Frameworks */,
+				233AF93A1F84FB0A0047141B /* FloatingHearts.framework in Frameworks */,
 				8B857E1C921A6B82A8707AF0 /* Pods_ILoveYou.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,7 +144,6 @@
 		232E8D9D1F016DAF00E642FE = {
 			isa = PBXGroup;
 			children = (
-				233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */,
 				232E8DA81F016DAF00E642FE /* ILoveYou */,
 				232E8DBD1F016DAF00E642FE /* ILoveYouTests */,
 				232E8DC81F016DAF00E642FE /* ILoveYouUITests */,
@@ -167,6 +166,7 @@
 		232E8DA81F016DAF00E642FE /* ILoveYou */ = {
 			isa = PBXGroup;
 			children = (
+				233AF92E1F84F85C0047141B /* External Libraries */,
 				2340247B1F0673AD00CE742C /* extentions */,
 				232E8DA91F016DAF00E642FE /* AppDelegate.swift */,
 				2312DBC61F472C4A006BB2D2 /* AudioPlayer.swift */,
@@ -199,11 +199,19 @@
 			path = ILoveYouUITests;
 			sourceTree = "<group>";
 		};
-		233E61791F63E58E005ABCF3 /* Products */ = {
+		233AF92E1F84F85C0047141B /* External Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				233E617E1F63E58E005ABCF3 /* FloatingHearts.framework */,
-				233E61801F63E58E005ABCF3 /* FloatingHeartsTests.xctest */,
+				233AF9311F84FADB0047141B /* FloatingHearts.xcodeproj */,
+			);
+			name = "External Libraries";
+			sourceTree = "<group>";
+		};
+		233AF9321F84FADB0047141B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				233AF9371F84FADB0047141B /* FloatingHearts.framework */,
+				233AF9391F84FADB0047141B /* FloatingHeartsExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,7 +268,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				233E61841F63E60F005ABCF3 /* PBXTargetDependency */,
+				233AF93D1F84FB0A0047141B /* PBXTargetDependency */,
 			);
 			name = ILoveYou;
 			productName = ILoveYou;
@@ -351,8 +359,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 233E61791F63E58E005ABCF3 /* Products */;
-					ProjectRef = 233E61781F63E58E005ABCF3 /* FloatingHearts.xcodeproj */;
+					ProductGroup = 233AF9321F84FADB0047141B /* Products */;
+					ProjectRef = 233AF9311F84FADB0047141B /* FloatingHearts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -365,18 +373,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		233E617E1F63E58E005ABCF3 /* FloatingHearts.framework */ = {
+		233AF9371F84FADB0047141B /* FloatingHearts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = FloatingHearts.framework;
-			remoteRef = 233E617D1F63E58E005ABCF3 /* PBXContainerItemProxy */;
+			remoteRef = 233AF9361F84FADB0047141B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		233E61801F63E58E005ABCF3 /* FloatingHeartsTests.xctest */ = {
+		233AF9391F84FADB0047141B /* FloatingHeartsExample.app */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = FloatingHeartsTests.xctest;
-			remoteRef = 233E617F1F63E58E005ABCF3 /* PBXContainerItemProxy */;
+			fileType = wrapper.application;
+			path = FloatingHeartsExample.app;
+			remoteRef = 233AF9381F84FADB0047141B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -589,10 +597,10 @@
 			target = 232E8DA51F016DAF00E642FE /* ILoveYou */;
 			targetProxy = 232E8DC61F016DAF00E642FE /* PBXContainerItemProxy */;
 		};
-		233E61841F63E60F005ABCF3 /* PBXTargetDependency */ = {
+		233AF93D1F84FB0A0047141B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FloatingHearts;
-			targetProxy = 233E61831F63E60F005ABCF3 /* PBXContainerItemProxy */;
+			targetProxy = 233AF93C1F84FB0A0047141B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
