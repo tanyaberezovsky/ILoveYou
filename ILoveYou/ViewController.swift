@@ -50,18 +50,18 @@ class ViewController: UIViewController {
         longPressGesture.minimumPressDuration = 0.2
         view.addGestureRecognizer(longPressGesture)
 
-        heartArrayIndex = 0
         heartIntervalArray[heartArrayIndex] = 0
         
         startTimerForHearts()
-        // Force the device in portrait mode when the view controller gets loaded
-      //  UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
-
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        player?.stop()
+    }
+    
     func initialize(){
         buttonSlow.imageView?.contentMode = UIViewContentMode.scaleAspectFit
         buttonRegular.imageView?.contentMode = UIViewContentMode.scaleAspectFit
-        //self.view.applyGradient(colours: [color1 , color2])
         self.buttonSlow.tag = mode.notPlaying
         self.buttonRegular.tag = mode.notPlaying
     }
@@ -70,18 +70,8 @@ class ViewController: UIViewController {
         bannerView.adUnitID = Keys.adMob.unitID
         bannerView.rootViewController = self
         //request the ad
-        // bannerView.load(GADRequest())
+        bannerView.load(GADRequest())
     }
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//        super.viewWillTransition(to: size, with: coordinator)
-//
-//        self.view.applyGradient(colours: [color1 , color2])
-//
-//    }
-//
-//    override func viewDidLayoutSubviews() {
-//        self.view.applyGradient(colours: [color1 , color2])
-//    }
     
     func startTimerForHearts() {
         print("heartIntervalArray = \(heartIntervalArray[heartArrayIndex])")
@@ -139,12 +129,6 @@ class ViewController: UIViewController {
                 }
 
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        player?.stop()
-    }
-    
-   
     
     @IBAction func buttonSlow(_ sender: UIButton) {
         buttonTouch(sender, secondButton: buttonRegular, fileName: "loveWordSlow")
