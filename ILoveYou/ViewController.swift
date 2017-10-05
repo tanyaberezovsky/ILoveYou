@@ -16,24 +16,6 @@ import UIKit
 import GoogleMobileAds
 import FloatingHearts
 
-enum icons: String{
-    case play = "triangle.png"
-    case stop = "square.png"
-    
-    static func getImageNameBy(number: Int)->String{
-        if (number == 0){
-            return icons.stop.rawValue
-        } else {
-            return icons.play.rawValue
-        }
-    }
-}
-
-struct mode {
-   static let playing = 0
-   static let notPlaying = 1
-}
-
 class ViewController: UIViewController {
     
     fileprivate struct HeartAttributes {
@@ -46,14 +28,13 @@ class ViewController: UIViewController {
     var loopTimer: Timer?
     var stopTimer: Timer?
     
-
     @IBOutlet weak var bannerView: GADBannerView!
 
     @IBOutlet weak var buttonSlow: UIButton!
     @IBOutlet weak var buttonRegular: UIButton!
     var player: MyAudioPlayer?
-    let heartRandomArray = (1...100).map{_ in arc4random_uniform(13)}
-    let heartIntervalArray = (1...100).map{_ in arc4random_uniform(8)}
+    let heartRandomArray = (1...100).map{_ in arc4random_uniform(11)}
+    var heartIntervalArray = (1...100).map{_ in arc4random_uniform(8)}
     var heartArrayIndex: Int = 0
     var timer:Timer?
     
@@ -70,13 +51,40 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(longPressGesture)
 
         heartArrayIndex = 0
+        heartIntervalArray[heartArrayIndex] = 0
         
-        scheduleHeartsAppearance()
         startTimerForHearts()
+        // Force the device in portrait mode when the view controller gets loaded
+      //  UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+
+    }
+    func initialize(){
+        buttonSlow.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        buttonRegular.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        //self.view.applyGradient(colours: [color1 , color2])
+        self.buttonSlow.tag = mode.notPlaying
+        self.buttonRegular.tag = mode.notPlaying
     }
     
+    func initAd(){
+        bannerView.adUnitID = Keys.adMob.unitID
+        bannerView.rootViewController = self
+        //request the ad
+        // bannerView.load(GADRequest())
+    }
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransition(to: size, with: coordinator)
+//
+//        self.view.applyGradient(colours: [color1 , color2])
+//
+//    }
+//
+//    override func viewDidLayoutSubviews() {
+//        self.view.applyGradient(colours: [color1 , color2])
+//    }
+    
     func startTimerForHearts() {
-        print("\(heartIntervalArray[heartArrayIndex])")
+        print("heartIntervalArray = \(heartIntervalArray[heartArrayIndex])")
         timer?.invalidate()
         let timerIntervalForResendingCode = TimeInterval(heartIntervalArray[heartArrayIndex] + 1)
         timer = Timer.scheduledTimer(timeInterval: timerIntervalForResendingCode,
@@ -93,8 +101,8 @@ class ViewController: UIViewController {
         }
         loopTimer = Timer.scheduledTimer(timeInterval: HeartAttributes.burstSlowDelay, target: self, selector: #selector(showTheLove), userInfo: nil, repeats: true)
         
+        print("heartRandomArray = \(heartRandomArray[heartArrayIndex])")
         let stopTimerInterval = TimeInterval(Double(heartRandomArray[heartArrayIndex]) * Double(HeartAttributes.burstSlowDelay))
-        print("stopTimerInterval ")
         stopTimer = Timer.scheduledTimer(timeInterval: stopTimerInterval, target: self, selector: #selector(stopLoopTimerLove), userInfo: nil, repeats: false)
         
         self.heartArrayIndex += 1
@@ -102,6 +110,7 @@ class ViewController: UIViewController {
     }
     
     func stopLoopTimerLove(){
+        print("stopTimerInterval ")
         loopTimer?.invalidate()
         stopTimer?.invalidate()
         timer?.invalidate()
@@ -135,22 +144,7 @@ class ViewController: UIViewController {
         player?.stop()
     }
     
-    func initialize(){
-        buttonSlow.imageView?.contentMode = UIViewContentMode.scaleAspectFit
-        buttonRegular.imageView?.contentMode = UIViewContentMode.scaleAspectFit
-        let color2 = UIColor(red: 67/255, green: 148/255, blue: 227/255, alpha: 1.0)
-        let color1 = UIColor(red: 98/255, green: 216/255, blue: 202/255, alpha: 1.0)
-        self.view.applyGradient(colours: [color1 , color2])
-        self.buttonSlow.tag = mode.notPlaying
-        self.buttonRegular.tag = mode.notPlaying
-    }
-    
-    func initAd(){
-        bannerView.adUnitID = Keys.adMob.unitID
-        bannerView.rootViewController = self
-        //request the ad
-        bannerView.load(GADRequest())
-    }
+   
     
     @IBAction func buttonSlow(_ sender: UIButton) {
         buttonTouch(sender, secondButton: buttonRegular, fileName: "loveWordSlow")
@@ -171,6 +165,8 @@ class ViewController: UIViewController {
             secondButton.toggleImage()
         }
     }
+    
+    
 }
 
 extension UIButton{

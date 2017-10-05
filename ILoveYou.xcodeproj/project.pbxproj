@@ -18,6 +18,8 @@
 		233AF93A1F84FB0A0047141B /* FloatingHearts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233AF9371F84FADB0047141B /* FloatingHearts.framework */; };
 		233AF93B1F84FB0A0047141B /* FloatingHearts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233AF9371F84FADB0047141B /* FloatingHearts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2340247D1F0673DB00CE742C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340247C1F0673DB00CE742C /* UIView.swift */; };
+		238622BC1F86202200BB32AC /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238622BB1F86202200BB32AC /* Shared.swift */; };
+		238622BE1F862EF500BB32AC /* GradienViewGrafic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238622BD1F862EF500BB32AC /* GradienViewGrafic.swift */; };
 		23F8E3071F07EA9A00D05E5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F8E3061F07EA9A00D05E5A /* GoogleService-Info.plist */; };
 		23F8E3091F08319A00D05E5A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F8E3081F08319A00D05E5A /* Keys.swift */; };
 		23F8E30B1F096F1900D05E5A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F8E30A1F096F1900D05E5A /* AdSupport.framework */; };
@@ -97,6 +99,8 @@
 		233AF9311F84FADB0047141B /* FloatingHearts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FloatingHearts.xcodeproj; path = "../../FloatingHearts-master/FloatingHearts.xcodeproj"; sourceTree = "<group>"; };
 		233E61431F63E129005ABCF3 /* FloatingHearts-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "FloatingHearts-master"; path = "../FloatingHearts-master"; sourceTree = "<group>"; };
 		2340247C1F0673DB00CE742C /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		238622BB1F86202200BB32AC /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		238622BD1F862EF500BB32AC /* GradienViewGrafic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradienViewGrafic.swift; sourceTree = "<group>"; };
 		23F8E3061F07EA9A00D05E5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23F8E3081F08319A00D05E5A /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		23F8E30A1F096F1900D05E5A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -172,6 +176,8 @@
 				2312DBC61F472C4A006BB2D2 /* AudioPlayer.swift */,
 				23F8E3081F08319A00D05E5A /* Keys.swift */,
 				232E8DAB1F016DAF00E642FE /* ViewController.swift */,
+				238622BD1F862EF500BB32AC /* GradienViewGrafic.swift */,
+				238622BB1F86202200BB32AC /* Shared.swift */,
 				232E8DAD1F016DAF00E642FE /* Main.storyboard */,
 				232E8DB01F016DAF00E642FE /* Assets.xcassets */,
 				232E8DB21F016DAF00E642FE /* LaunchScreen.storyboard */,
@@ -560,9 +566,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				238622BC1F86202200BB32AC /* Shared.swift in Sources */,
 				232E8DAC1F016DAF00E642FE /* ViewController.swift in Sources */,
 				23F8E3091F08319A00D05E5A /* Keys.swift in Sources */,
 				2312DBC71F472C4A006BB2D2 /* AudioPlayer.swift in Sources */,
+				238622BE1F862EF500BB32AC /* GradienViewGrafic.swift in Sources */,
 				2340247D1F0673DB00CE742C /* UIView.swift in Sources */,
 				232E8DAA1F016DAF00E642FE /* AppDelegate.swift in Sources */,
 			);

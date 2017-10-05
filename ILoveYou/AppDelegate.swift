@@ -44,7 +44,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+       
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            // It's an iPhone
+            return UIInterfaceOrientationMask.portrait
+        default:
+            return UIInterfaceOrientationMask.all
+        }
+    }
 }
 
