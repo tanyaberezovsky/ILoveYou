@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonRegular: UIButton!
     var player: MyAudioPlayer?
     let heartRandomArray = (1...100).map{_ in arc4random_uniform(11)}
-    var heartIntervalArray = (1...100).map{_ in arc4random_uniform(8)}
+    var heartIntervalArray = (1...100).map{_ in arc4random_uniform(9)}
     var heartArrayIndex: Int = 0
     var timer:Timer?
     
@@ -70,10 +70,11 @@ class ViewController: UIViewController {
         bannerView.adUnitID = Keys.adMob.unitID
         bannerView.rootViewController = self
         //request the ad
-        bannerView.load(GADRequest())
+        //bannerView.load(GADRequest())
     }
     
     func startTimerForHearts() {
+        resetIndexIfNeeded()
         print("heartIntervalArray = \(heartIntervalArray[heartArrayIndex])")
         timer?.invalidate()
         let timerIntervalForResendingCode = TimeInterval(heartIntervalArray[heartArrayIndex] + 1)
@@ -84,11 +85,16 @@ class ViewController: UIViewController {
                              repeats: false)
     }
     
-    func scheduleHeartsAppearance()  {
-        print("scheduleHeartsAppearance")
+    func resetIndexIfNeeded(){
         if (self.heartArrayIndex == self.heartRandomArray.count) {
+            print("heartArrayIndex = 0")
             self.heartArrayIndex = 0
         }
+    }
+    
+    func scheduleHeartsAppearance()  {
+        print("scheduleHeartsAppearance")
+        resetIndexIfNeeded()
         loopTimer = Timer.scheduledTimer(timeInterval: HeartAttributes.burstSlowDelay, target: self, selector: #selector(showTheLove), userInfo: nil, repeats: true)
         
         print("heartRandomArray = \(heartRandomArray[heartArrayIndex])")
@@ -149,22 +155,6 @@ class ViewController: UIViewController {
             secondButton.toggleImage()
         }
     }
-    
-    
 }
 
-extension UIButton{
-    public func toggleImage(){
-        self.tag.toggle()
-        let imageName = icons.getImageNameBy(number: self.tag)
-        self.setImage(UIImage(named: imageName), for: .normal)
-    }
-}
-
-extension Int{
-    /// Mutates a int:
-    mutating func toggle() {
-        self = self == mode.notPlaying ? mode.playing : mode.notPlaying
-    }
-}
 
